@@ -1,0 +1,13 @@
+$color-primary: #1e5f74;
+$color-background: #111111;
+$color-text: #fff;
+$color-text-dark: #fcd9b6;
+$color-content: #133b5c;
+
+:export {
+  color-primary: $color-primary;
+  color-background: $color-background;
+  color-text: $color-text;
+  color-text-dark: $color-text-dark;
+  color-content: $color-content;
+}

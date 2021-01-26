@@ -1,0 +1,9 @@
+<svg width="110" height="100" viewBox="0 0 551 502" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M1 501L501 501L251 1.00002L1 501Z" fill="#DDDDDD"/>
+  <path d="M501 501H551L301 1.00013H251L501 501Z" fill="black"/>
+  <path d="M201 251L326 501H376L251 251H201Z" fill="black"/>
+  <path d="M201 251L76 501" stroke="black"/>
+  <path d="M201 251.457L326 501" stroke="white" stroke-width="2"/>
+  <path d="M251 1L1.00001 501" stroke="black"/>
+  <path d="M251 0.999987L501 501" stroke="white" stroke-width="2"/>
+</svg>

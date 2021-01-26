@@ -1,0 +1,27 @@
+.landing-page {
+  // TEMP
+  // background-color: rgba(255, 255, 255, 0.096);
+  // TEMP
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+
+  .description {
+    font-style: normal;
+    font-weight: 200;
+    font-size: 40px;
+    line-height: 72px;
+    letter-spacing: 0.05em;
+    margin-left: 400px;
+
+    .highlight {
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-weight: 500;
+      font-size: 60px;
+      color: #ffdd7c;
+      text-shadow: 4px 0px 0px #1c8ef1;
+    }
+  }
+}
