@@ -30,13 +30,14 @@ export function Logo({scale, lightColor, shadowColor}) {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <path d="M0 500L500 500L250 0L0 500Z" fill={lightColor}/>
-        <path className="pathAnimation" d="M0 500L500 500L250 -2L-1 500Z" fill={shadowColor} fillOpacity={opacity}/>
+        <path d="M0 500L500 500L250 -2L-1 500Z" fill={lightColor}/>
         <path d="M500 500H550L300 0H250L500 500Z" fill={shadowColor}/>
-        <path className="pathAnimation" d="M500 500H550L300 0H250L500 500Z" fill={lightColor} fillOpacity={opacity}/>
         <path d="M200 250L325 500H375L250 250H200Z" fill={shadowColor}/>
-        <path className="pathAnimation" d="M200 250L325 500H375L250 250H200Z" fill={lightColor} fillOpacity={opacity}/>
         <path d="M200 250L75 500" stroke={shadowColor}/>
+        <path className="pathAnimation" d="M0 500L500 500L250 -2L-1 500Z" fill={shadowColor} fillOpacity={opacity}/>
+        <path className="pathAnimation" d="M500 500H550L300 0H250L500 500Z" fill={lightColor} fillOpacity={opacity}/>
+        <path className="pathAnimation" d="M200 250L325 500H375L250 250H200Z" fill={lightColor} fillOpacity={opacity}/>
+        <path className="pathAnimation" d="M200 250L75 500" stroke={lightColor} fillOpacity={opacity}/>
         {/* <path d="M200 250L325 500" stroke="white" strokeWidth="2"/>
         <path d="M250 0L0 500" stroke={shadowColor}/>
         <path d="M250 0L500 500" stroke="white" strokeWidth="2"/> */}

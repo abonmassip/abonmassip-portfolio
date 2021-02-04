@@ -8,6 +8,8 @@
     "start": "next start"
   },
   "dependencies": {
+    "@fullpage/react-fullpage": "^0.1.18",
+    "fullpage.js": "^3.0.9",
     "next": "10.0.5",
     "react": "17.0.1",
     "react-dom": "17.0.1",

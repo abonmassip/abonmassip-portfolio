@@ -1,6 +1,6 @@
 @import '../../styles/theme';
 
-.Header {
+.header {
   // TEMP
   // background-color: rgba(255, 255, 255, 0.2);
   // TEMP
@@ -14,30 +14,57 @@
   display: flex;
   align-items: center;
 
-  .Header__logo {
+  .link {
+    position: fixed;
+    top: calc(50vh - 200px);
     display: flex;
     flex-direction: column;
     align-items: center;
     cursor: pointer;
+    text-decoration: none;
+    transition: 0.5s;
 
-    svg {
-      transition: 0.1s;
+    .link_logo {
+      transition: 0.08s;
 
       &:hover {
         transform: rotate(2deg) scale(1.1);
       }
+
+      svg {
+        margin: 0px 16px;
+        transition: 0.5s;
+      }
     }
 
-    .Header__logo__text {
+    .link_text {
       font-family: 'IBM Plex Sans', sans-serif;
       font-size: 25px;
       font-weight: 500;
       color: #ffdd7c;
       text-shadow: 2px 0px 0px #1c8ef1;
+      position: relative;
+      opacity: 0;
+      top: -25px;
+      transition: 0.5s;
+
+      &.visible {
+        opacity: 1;
+        top: 0px;
+      }
+    }
+
+    &.small {
+      top: 50px;
+
+      .link_logo svg {
+        width: 110px;
+        height: 100px;
+      }
     }
   }
 
-  .Header__menu {
+  .menu {
     margin: 0;
     margin-left: auto;
     list-style: none;
@@ -48,16 +75,19 @@
     font-size: 50px;
     font-weight: 400;
 
-    li {
+    a {
+      text-decoration: none;
       cursor: pointer;
       transition: 0.1s;
 
       &:hover {
-        color: #1c8ef1;
+        color: #ffdd7c;
       }
     }
-    .inverted {
-      color: #ffdd7c;
-    }
   }
+}
+
+.active {
+  color: #ffdd7c;
+  text-shadow: 4px 0px 0px #1c8ef1;
 }

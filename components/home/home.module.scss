@@ -1,22 +1,18 @@
-.landing-page {
-  // TEMP
-  // background-color: rgba(255, 255, 255, 0.096);
-  // TEMP
-
+.Home {
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 100vh;
 
-  .description {
+  .Home__description {
     font-style: normal;
     font-weight: 200;
     font-size: 40px;
     line-height: 72px;
     letter-spacing: 0.05em;
-    margin-left: 400px;
+    // margin-left: 400px;
 
-    .highlight {
+    .Home__description__highlight {
       font-family: 'IBM Plex Sans', sans-serif;
       font-weight: 500;
       font-size: 60px;
