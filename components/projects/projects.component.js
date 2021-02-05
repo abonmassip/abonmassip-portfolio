@@ -1,11 +1,30 @@
 import styles from './projects.module.scss';
 
+import { Project } from '../project/project.component';
+
 export function Projects() {
   return (
     <div className="section" data-anchor="projects">
-      <div className="slide" data-anchor="slide1"><div className={styles.projecte}>ONE</div></div>
-      <div className="slide" data-anchor="slide2"><div className={styles.projecte}>TWO</div></div>
-      <div className="slide" data-anchor="slide3"><div className={styles.projecte}>THREE</div></div>
+      <div className="slide" data-anchor="1">
+        <Project
+          image="/ecommerce.jpg"
+          title="E-commerce App"
+          github="https://github.com/abonmassip/lazy-susans"
+          liveDemo="https://lazy-susans.herokuapp.com/"
+        >
+          Built with *React*
+          *Redux* for state management
+          *Firebase* for authentication and database
+          *Stripe* for managing the payments
+          I also used *React Hooks*, *GraphQL* and *ContextAPI*
+        </Project>
+      </div>
+      <div className="slide" data-anchor="2">
+        <div className={styles.projecte}>TWO</div>
+      </div>
+      <div className="slide" data-anchor="3">
+        <div className={styles.projecte}>THREE</div>
+      </div>
       {/* <div className={styles.Projects}>
         <div className={styles.project}>
           <div className={styles.description}>
