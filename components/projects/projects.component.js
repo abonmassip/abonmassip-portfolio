@@ -1,46 +1,44 @@
-import styles from './projects.module.scss';
-
 import { Project } from '../project/project.component';
 
-export function Projects() {
+import styles from './projects.module.scss';
+
+export function Projects({allProjectsData}) {
   return (
     <div className="section" data-anchor="projects">
-      <div className="slide" data-anchor="1">
+
+      {allProjectsData.map(({ id, date, title, github, demo}, i) => (
+        <div className="slide" data-anchor={i + 1}>
+          <Project
+            image={`/${id}.jpg`}
+            title={title}
+            text='blabla'
+            github={github}
+            demo={demo}
+          /> 
+        </div>
+      ))}
+
+      {/* <div className="slide" data-anchor="1">
         <Project
           image="/ecommerce.jpg"
           title="E-commerce App"
+          text="
+          Built with **React**<br>
+          **Redux** for state management<br>
+          **Firebase** for authentication and database<br>
+          **Stripe** for managing the payments<br>
+          I also used **React Hooks**, **GraphQL** and **ContextAPI**
+          "
           github="https://github.com/abonmassip/lazy-susans"
-          liveDemo="https://lazy-susans.herokuapp.com/"
+          demo="https://lazy-susans.herokuapp.com/"
         >
-          Built with *React*
-          *Redux* for state management
-          *Firebase* for authentication and database
-          *Stripe* for managing the payments
-          I also used *React Hooks*, *GraphQL* and *ContextAPI*
         </Project>
       </div>
       <div className="slide" data-anchor="2">
-        <div className={styles.projecte}>TWO</div>
+        <div>TWO</div>
       </div>
       <div className="slide" data-anchor="3">
-        <div className={styles.projecte}>THREE</div>
-      </div>
-      {/* <div className={styles.Projects}>
-        <div className={styles.project}>
-          <div className={styles.description}>
-            <h1>E-Commerce App</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque senectus non molestie nascetur. Massa facilisis metus lobortis aliquam cum leo vel integer. Ultrices volutpat nam leo neque, in eget quisque. Etiam vel urna, sem ornare risus.
-            </p>
-            <a href="#">Github</a>
-            <a href="#">Live demo</a>
-          </div>
-          <div className={styles.images}>
-            <img src="#" alt="" large="true"/>
-            <img src="#" alt="" />
-            <img src="#" alt="" />
-          </div>
-        </div>
+        <div>THREE</div>
       </div> */}
     </div>
   )

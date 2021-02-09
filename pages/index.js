@@ -2,14 +2,16 @@ import ReactFullpage from '@fullpage/react-fullpage';
 import { useState } from 'react';
 import Head from 'next/head'
 
-import styles from '../styles/App.module.scss'
-
 import { Header } from '../components/header/Header.component';
 import { Home } from '../components/home/home.component';
 import { Projects } from '../components/projects/projects.component';
 import { About } from '../components/about/about.component';
 
-export default function App() {
+import styles from '../styles/App.module.scss'
+
+import { getProjects } from '../lib/projects';
+
+export default function App({allProjectsData}) {
 
   const [scrollingTo, setScrollingTo] = useState('home');
   const [active, setActive] = useState('home');
@@ -42,7 +44,7 @@ export default function App() {
           return (
             <ReactFullpage.Wrapper>
               <Home/>
-              <Projects />
+              <Projects allProjectsData={allProjectsData}/>
               <About />
             </ReactFullpage.Wrapper>
           );
@@ -50,4 +52,13 @@ export default function App() {
       />
     </div>
   )
+}
+
+export async function getStaticProps() {
+  const allProjectsData = getProjects();
+  return {
+    props: {
+      allProjectsData
+    }
+  }
 }
