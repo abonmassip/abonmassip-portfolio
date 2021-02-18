@@ -1,19 +1,19 @@
 import styles from './project.module.scss';
 
-export function Project({image, title, text, github, demo}) {
-  
+export function Project({image, title, text}) {
+
   return(
     <div className={styles.project}>
-      <img className={styles.image} src={image} alt={title} />
-      <div className={styles.description}>
-        <h1 className={styles.description_title}>{title}</h1>
-        <div
-          className={styles.description_text}
-          dangerouslySetInnerHTML={{ __html: text }}
-        />
-        <a href={github} className={styles.description_link}>Github</a>
-        <a href={demo} className={styles.description_link}>Live demo</a>
+
+      <div className={styles.image} >
+        <img src={image} alt={title} />
       </div>
+
+      <div className={styles.info}>
+        <h1 className="title color shadow-s">{title}</h1>
+        <div className={styles.info_text} dangerouslySetInnerHTML={{ __html: text }}/>
+      </div>
+
     </div>
   );
 }

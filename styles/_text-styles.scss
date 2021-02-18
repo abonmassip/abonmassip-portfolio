@@ -1,0 +1,21 @@
+.color {
+  color: var(--main-color);
+}
+
+.shadow {
+  text-shadow: 4px 0px 0px var(--shadow-color);
+}
+.shadow-s {
+  text-shadow: 2px 0px 0px var(--shadow-color);
+}
+
+.title {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 45px;
+  font-weight: 500;
+
+  &--home {
+    @extend .title;
+    font-size: 60px;
+  }
+}

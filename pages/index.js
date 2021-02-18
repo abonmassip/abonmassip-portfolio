@@ -9,9 +9,9 @@ import { About } from '../components/about/about.component';
 
 import styles from '../styles/App.module.scss'
 
-import { getProjects } from '../lib/projects';
+import { getProjectsData } from '../lib/projects';
 
-export default function App({allProjectsData}) {
+export default function App({projectsData}) {
 
   const [scrollingTo, setScrollingTo] = useState('home');
   const [active, setActive] = useState('home');
@@ -44,7 +44,7 @@ export default function App({allProjectsData}) {
           return (
             <ReactFullpage.Wrapper>
               <Home/>
-              <Projects allProjectsData={allProjectsData}/>
+              <Projects projectsData={projectsData}/>
               <About />
             </ReactFullpage.Wrapper>
           );
@@ -55,10 +55,10 @@ export default function App({allProjectsData}) {
 }
 
 export async function getStaticProps() {
-  const allProjectsData = getProjects();
+  const projectsData = await getProjectsData();
   return {
     props: {
-      allProjectsData
+      projectsData
     }
   }
 }

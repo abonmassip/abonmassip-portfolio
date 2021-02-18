@@ -1,8 +1,6 @@
 ---
 date: '2020-02-11'
 title: 'Face Recognition App'
-github: 'https://github.com/abonmassip/smartbrain'
-demo: 'https://dashboard.heroku.com/apps/abonmassip-smartbrain'
 ---
 
 Built with **React**
@@ -14,3 +12,7 @@ Built with **React**
 **Clarifai API** for the face recognition functions
 
 I also used **React Hooks**, **Tachions** for styling and **bcrypt** for hashing
+
+[Github](https://github.com/abonmassip/smartbrain)
+
+[Live demo](https://dashboard.heroku.com/apps/abonmassip-smartbrain)

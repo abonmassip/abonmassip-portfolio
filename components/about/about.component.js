@@ -4,8 +4,9 @@ export function About() {
   return (
     <div className="section" data-anchor="about">
       <div className={styles["about-me"]}>
-        <h1>About Me</h1>
-        <img src="/me.jpg" alt="Albert" />
+        <div className={styles.avatar}>
+          <img src="/me_transparent.png" alt="Albert" />
+        </div>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Placerat auctor vitae condimentum tellus elementum. Feugiat odio non nibh orci montes, tortor imperdiet. Nisl malesuada suspendisse at pharetra. In quis purus dictumst quis.
         </p>

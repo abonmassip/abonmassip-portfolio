@@ -1,8 +1,6 @@
 ---
 date: '2020-09-21'
 title: 'E-Commerce App'
-github: 'https://github.com/abonmassip/lazy-susans'
-demo: 'https://lazy-susans.herokuapp.com/'
 ---
 
 Built with **React**
@@ -14,3 +12,7 @@ Built with **React**
 **Stripe** for managing the payments
 
 I also used **React Hooks**, **GraphQL** and **ContextAPI**
+
+[Github](https://github.com/abonmassip/lazy-susans)
+
+[Live demo](https://lazy-susans.herokuapp.com/)

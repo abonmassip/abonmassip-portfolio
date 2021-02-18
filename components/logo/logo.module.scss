@@ -1,0 +1,21 @@
+.fillLight {
+  fill: var(--main-color);
+}
+.strokeLight {
+  stroke: var(--main-color);
+}
+
+.fillShadow {
+  fill: var(--shadow-color);
+}
+
+.strokeShadow {
+  stroke: var(--shadow-color);
+}
+
+.fillLight,
+.strokeLight,
+.fillShadow,
+.strokeShadow {
+  transition: 0.1s;
+}
