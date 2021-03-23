@@ -1,7 +1,5 @@
 import { Project } from '../project/project.component';
 
-import styles from './projects.module.scss';
-
 export function Projects({projectsData}) {
   return (
     <div className="section" data-anchor="projects">

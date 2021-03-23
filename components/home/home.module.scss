@@ -1,23 +1,19 @@
-.Home {
+.home {
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 100vh;
+  transition: 1s;
+  padding: 0 10vw;
 
-  .Home__description {
-    font-style: normal;
-    font-weight: 200;
-    font-size: 40px;
-    line-height: 72px;
-    letter-spacing: 0.05em;
-    // margin-left: 400px;
+  span {
+    width: 30vw;
+    text-align: center;
+    transition: 0.25s;
+  }
 
-    // .Home__description__highlight {
-    //   font-family: 'IBM Plex Sans', sans-serif;
-    //   font-weight: 500;
-    //   font-size: 60px;
-    //   color: var(--main-color);
-    //   text-shadow: 4px 0px 0px var(--shadow-color);
-    // }
+  .space {
+    width: 440px;
+    height: 400px;
   }
 }

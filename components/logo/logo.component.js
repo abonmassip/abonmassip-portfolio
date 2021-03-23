@@ -6,11 +6,11 @@ function trackPosition(e) {
   const mousePos = e.clientX - e.currentTarget.getBoundingClientRect().x;
   const logoWidth = e.currentTarget.getBoundingClientRect().width;
   const newOpacity = mousePos/logoWidth;
-  const logo = document.querySelectorAll(".pathAnimation");
-  logo.forEach(element => {
-    element.style["fill-opacity"] = newOpacity;
-    element.style["stroke-opacity"] = newOpacity;
-  });
+  // const logo = document.querySelectorAll(".pathAnimation");
+  // logo.forEach(element => {
+  //   element.style["fill-opacity"] = newOpacity;
+  //   element.style["stroke-opacity"] = newOpacity;
+  // });
   opacity = newOpacity;
 }
 

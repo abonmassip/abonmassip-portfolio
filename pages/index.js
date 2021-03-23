@@ -1,5 +1,5 @@
 import ReactFullpage from '@fullpage/react-fullpage';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Head from 'next/head'
 
 import { Header } from '../components/header/Header.component';
@@ -11,7 +11,13 @@ import styles from '../styles/App.module.scss'
 
 import { getProjectsData } from '../lib/projects';
 
+import { setRandomColor } from '../lib/colors';
+
 export default function App({projectsData}) {
+
+  // useEffect(() => {
+  //   setRandomColor();
+  // }, []);
 
   const [scrollingTo, setScrollingTo] = useState('home');
   const [active, setActive] = useState('home');
@@ -30,16 +36,17 @@ export default function App({projectsData}) {
       <Head>
         <title>Albert Bonmassip</title>
         <link rel="icon" href="/favicon.ico" />
-        <link rel="stylesheet" type="text/css" href="fullpage.css" />
       </Head>
 
       <Header scrollingTo={scrollingTo} active={active}/>
 
       <ReactFullpage
+        licenseKey='7B41902B-58344F4B-8F05FF7C-D6511DD6'
         scrollingSpeed = {500}
         anchors={["home", "projects", "about"]}
         onLeave={onLeave}
         afterLoad={afterLoad}
+        slidesNavigation={true}
         render={( {state, fullpageApi}) => {
           return (
             <ReactFullpage.Wrapper>
