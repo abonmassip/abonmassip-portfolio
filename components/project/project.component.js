@@ -1,17 +1,34 @@
+import Tilt from 'react-parallax-tilt';
+
 import styles from './project.module.scss';
 
-export function Project({image, title, text}) {
+export function Project({image, title, text, links}) {
 
   return(
     <div className={styles.project}>
 
-      <div className={styles.image} >
+      <Tilt
+        className={styles.tilt}
+        perspective={500}
+        tiltMaxAngleX={5}
+        tiltMaxAngleY={10}
+        glareEnable={true}
+        glareMaxOpacity={0.2}
+        scale={1.08}
+      >
         <img src={image} alt={title} />
-      </div>
+      </Tilt>
 
       <div className={styles.info}>
-        <h1 className="title color shadow-s">{title}</h1>
+        <h1 className="main-color">{title}</h1>
         <div className={styles.info_text} dangerouslySetInnerHTML={{ __html: text }}/>
+        <div className={styles.info_links}>
+          {
+            links
+              ? Object.entries(links).map(([site, link]) => <a href={link} key={`${title}_${site}`}>{site}</a>)
+              : null
+          }
+        </div>
       </div>
 
     </div>

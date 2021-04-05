@@ -1,10 +1,10 @@
-import { colors, changeColor, setRandomColor } from '../../lib/colors';
+import { setRandomColor } from '../../lib/colors';
 
 import styles from './Header.module.scss';
 
 import { Logo } from '../logo/logo.component';
 
-export function Header({scrollingTo, active}) {
+export function Header({scrollingTo}) {
 
   return (
     <div className={styles.header}>
@@ -17,37 +17,12 @@ export function Header({scrollingTo, active}) {
         <div className={styles.link_logo}>
           <Logo scale={400} lightColor="#FFDD7C" shadowColor="#1C8EF1"/>
         </div>
-        <div className={`${styles.link_text} color shadow-s ${scrollingTo !== "home" ? styles.visible : ""}`}>abonmassip</div>
+        <div className={`${styles.link_text} main-color shadow-s ${scrollingTo !== "home" ? styles.visible : ""}`}>abonmassip</div>
       </a>
-      <div className={styles.colors}>
-        {
-          scrollingTo === "homes"
-            ? colors.map(color => (
-              <div
-                key={color.main}
-                className={styles.colors_square}
-                style={{backgroundColor: color.main, filter: `drop-shadow(5px 2px 0px ${color.shadow})`}}
-                onClick={() => changeColor(color.main, color.shadow)}
-              />
-            ))
-            : null
-        }
-      </div>
+
       <ul className={styles.menu}>
-        <li><a className={scrollingTo === "projects" ? "color shadow" : ""} href="#projects">projects</a></li>
-        <li><a className={scrollingTo === "about" ? "color shadow" : ""} href="#about">about me</a></li>
-        {/* <li className={styles.colors}>
-          {
-            colors.map(color => (
-              <div
-                key={color.main}
-                className={styles.colors_square}
-                style={{backgroundColor: color.main, filter: `drop-shadow(5px 0px 0px ${color.shadow})`}}
-                onClick={() => changeColor(color.main, color.shadow)}
-              />
-            ))
-          }
-        </li> */}
+        <li><a className={scrollingTo === "projects" ? "main-color shadow" : ""} href="#projects">projects</a></li>
+        <li><a className={scrollingTo === "about" ? "main-color shadow" : ""} href="#about">about me</a></li>
       </ul>
     </div>
   )

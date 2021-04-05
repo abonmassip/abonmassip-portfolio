@@ -1,12 +1,20 @@
-@import 'theme';
+// @import 'theme';
 @import 'text-styles';
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;400&family=IBM+Plex+Sans:wght@500&display=swap');
 
 :root {
-  --main-color: #{$main-color};
-  --shadow-color: #{$shadow-color};
-  --background-color: #{$background-color};
-  --text-color: #{$text-color};
+  --main-color: #ffdd7c;
+  --shadow-color: #1c8ef1;
+  --background-color: #111111;
+  --text-color: #ffffff;
+
+  --screen-mobile: (max-width: 767px);
+  --screen-tablet-from: (min-width: 768px);
+  --screen-tablet-until: (max-width: 1023px);
+  --screen-desktop-from: (min-width: 1024px);
+  --screen-mdpi-laptop-until: (max-width: 1279px);
+  --screen-mdpi-until: (max-width: 1407px);
+  --screen-hdpi-from: (max-width: 1408px);
 }
 
 html,
@@ -20,6 +28,12 @@ body {
   background-color: var(--background-color);
   scroll-behavior: smooth;
   color: var(--text-color);
+}
+
+@media screen and (max-width: 1408px) {
+  body {
+    background-color: #333;
+  }
 }
 
 strong {
@@ -36,6 +50,14 @@ a {
   box-sizing: border-box;
 }
 
+.emoji {
+  font-size: 1.2rem;
+}
+
+.comment {
+  color: #aaa;
+}
+
 // Fullpage.js extra styles
 
 .fp-slidesNav.fp-bottom {
@@ -43,13 +65,7 @@ a {
   justify-content: center;
 
   span {
-    transition: 0.1s;
     background: var(--main-color);
-    filter: drop-shadow(0px 0px 0px var(--shadow-color));
-  }
-
-  .active span {
-    filter: drop-shadow(4px 0px 0px var(--shadow-color));
   }
 }
 

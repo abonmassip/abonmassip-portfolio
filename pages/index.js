@@ -1,5 +1,5 @@
 import ReactFullpage from '@fullpage/react-fullpage';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Head from 'next/head'
 
 import { Header } from '../components/header/Header.component';
@@ -11,22 +11,18 @@ import styles from '../styles/App.module.scss'
 
 import { getProjectsData } from '../lib/projects';
 
-import { setRandomColor } from '../lib/colors';
-
 export default function App({projectsData}) {
-
-  // useEffect(() => {
-  //   setRandomColor();
-  // }, []);
 
   const [scrollingTo, setScrollingTo] = useState('home');
   const [active, setActive] = useState('home');
 
   function onLeave(origin, destination, direction) {
+    console.log('scrolling to ', destination.anchor);
     setScrollingTo(destination.anchor);
   }
-
+  
   function afterLoad(origin, destination, direction)  {
+    console.log('active ', destination.anchor);
     setActive(destination.anchor);
   }
 
@@ -35,10 +31,11 @@ export default function App({projectsData}) {
 
       <Head>
         <title>Albert Bonmassip</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.svg" />
+        <link rel="alternate icon" href="/favicon.ico" />
       </Head>
 
-      <Header scrollingTo={scrollingTo} active={active}/>
+      <Header scrollingTo={scrollingTo} />
 
       <ReactFullpage
         licenseKey='7B41902B-58344F4B-8F05FF7C-D6511DD6'
@@ -50,13 +47,14 @@ export default function App({projectsData}) {
         render={( {state, fullpageApi}) => {
           return (
             <ReactFullpage.Wrapper>
-              <Home/>
-              <Projects projectsData={projectsData}/>
+              <Home />
+              <Projects projectsData={projectsData} />
               <About />
             </ReactFullpage.Wrapper>
           );
         }}
       />
+
     </div>
   )
 }

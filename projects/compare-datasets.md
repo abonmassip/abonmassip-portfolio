@@ -1,14 +1,13 @@
 ---
 date: '2021-03-05'
-title: 'Compare Datasets'
+title: 'Compare Datasets - WIP'
+links: {
+  Github: 'https://github.com/abonmassip/compare-datasets'
+}
 ---
 
-Tool for science research, to help her compare large lists of data. The project started small and kept growing to implement graphs, users with saved data and use of APIs to translate gene names.
+Tool for formatting and comparing large lists of data in multiple ways.
 
-Built with **React**, used **Express.js** for the backend server and **PostgresSQL** for the database.
+Built with **React**, **Redux** for state management and **Firebase** for authentication and database.
 
-Check the [old prototype](https://github.com/abonmassip/JSapps), made in vanilla JS, when I started coding
-
-[Github](#)
-
-[Live demo](#)
+This project was born when I started learning JS and made this [old prototype](https://github.com/abonmassip/compare-datasets-old) in vanilla JS, to help my wife with her science research.
