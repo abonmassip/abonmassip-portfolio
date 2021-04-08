@@ -1,21 +1,21 @@
-import styles from './logo.module.scss';
+import styles from './logo.module.scss'
 
-let position = 0;
+let position = 0
 
 function trackPosition(e) {
-  const mousePos = e.clientX - e.currentTarget.getBoundingClientRect().x;
-  const logoWidth = e.currentTarget.getBoundingClientRect().width;
-  position = mousePos/logoWidth;
+  const mousePos = e.clientX - e.currentTarget.getBoundingClientRect().x
+  const logoWidth = e.currentTarget.getBoundingClientRect().width
+  position = mousePos / logoWidth
 }
 
 function fixOpacity() {
-  document.querySelectorAll('[data-animation]').forEach(el => {
-    el.style["fill-opacity"] = el.style["stroke-opacity"] = Math.round(position);
-  });
+  document.querySelectorAll('[data-animation]').forEach((el) => {
+    el.style['fill-opacity'] = el.style['stroke-opacity'] = Math.round(position)
+  })
 }
 
-export const Logo = ({scale = 1000}) => (
-  <svg 
+export const Logo = ({ scale = 1000 }) => (
+  <svg
     width={Math.floor(scale * 1.1)}
     height={scale}
     onMouseMove={trackPosition}
@@ -33,4 +33,4 @@ export const Logo = ({scale = 1000}) => (
     <path data-animation className={styles.fillLight} fillOpacity={0} d="M200 250L325 500H375L250 250H200Z" />
     <path data-animation className={styles.strokeLight} strokeOpacity={0} d="M200 250L75 500" />
   </svg>
-);
+)

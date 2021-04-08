@@ -1,12 +1,10 @@
-import Tilt from 'react-parallax-tilt';
+import Tilt from 'react-parallax-tilt'
 
-import styles from './project.module.scss';
+import styles from './project.module.scss'
 
-export function Project({image, title, text, links}) {
-
-  return(
+export function Project({ image, title, text, links }) {
+  return (
     <div className={styles.project}>
-
       <Tilt
         className={styles.tilt}
         perspective={500}
@@ -21,16 +19,17 @@ export function Project({image, title, text, links}) {
 
       <div className={styles.info}>
         <h1>{title}</h1>
-        <div className={styles.info_text} dangerouslySetInnerHTML={{ __html: text }}/>
+        <div className={styles.info_text} dangerouslySetInnerHTML={{ __html: text }} />
         <div className={styles.info_links}>
-          {
-            links
-              ? Object.entries(links).map(([site, link]) => <a href={link} key={`${title}_${site}`}>{site}</a>)
-              : null
-          }
+          {links
+            ? Object.entries(links).map(([site, link]) => (
+                <a href={link} key={`${title}_${site}`}>
+                  {site}
+                </a>
+              ))
+            : null}
         </div>
       </div>
-
     </div>
-  );
+  )
 }

@@ -1,45 +1,34 @@
-import { setRandomColor } from '../../lib/colors';
+import { setRandomColor } from '../../lib/colors'
 
-import styles from './Header.module.scss';
+import styles from './Header.module.scss'
 
-import { Logo } from '../logo/logo.component';
+import { Logo } from '../logo/logo.component'
 
-export function Header({scrollingTo}) {
-
+export function Header({ scrollingTo }) {
   return (
     <div className={styles.header}>
-      <a 
-        className={`${styles.link} ${scrollingTo !== "home" ? styles["small"] : ""}`} 
+      <a
+        className={`${styles.link} ${scrollingTo !== 'home' ? styles['small'] : ''}`}
         href="#home"
-        onClick={() => scrollingTo === "home" && setRandomColor()}
+        onClick={() => scrollingTo === 'home' && setRandomColor()}
       >
         <div className={styles.link_logo}>
           <Logo />
         </div>
-        <div 
-          className={`${styles.link_text} ${scrollingTo !== "home" ? styles.visible : ""}`}
-        >
-          abonmassip
-        </div>
+        <div className={`${styles.link_text} ${scrollingTo !== 'home' ? styles.visible : ''}`}>abonmassip</div>
       </a>
 
       <ul className={styles.menu}>
         <li>
-          <a 
-            className={scrollingTo === "projects" ? styles.active : ""} 
-            href="#projects"
-          >
+          <a className={scrollingTo === 'projects' ? styles.active : ''} href="#projects">
             projects
           </a>
         </li>
         <li>
-          <a 
-            className={scrollingTo === "about" ? styles.active : ""} 
-            href="#about"
-          >
+          <a className={scrollingTo === 'about' ? styles.active : ''} href="#about">
             about me
           </a>
-          </li>
+        </li>
       </ul>
     </div>
   )
