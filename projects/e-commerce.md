@@ -1,6 +1,6 @@
 ---
 date: '2020-09-21'
-title: 'E-Commerce App'
+title: 'E-COMMERCE APP'
 links: {
   Github: 'https://github.com/abonmassip/lazy-susans',
   ['Live demo']: 'https://lazy-susans.herokuapp.com/'

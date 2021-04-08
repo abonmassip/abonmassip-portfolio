@@ -7,8 +7,6 @@ import { Home } from '../components/home/home.component';
 import { Projects } from '../components/projects/projects.component';
 import { About } from '../components/about/about.component';
 
-import styles from '../styles/App.module.scss'
-
 import { getProjectsData } from '../lib/projects';
 
 export default function App({projectsData}) {
@@ -17,17 +15,17 @@ export default function App({projectsData}) {
   const [active, setActive] = useState('home');
 
   function onLeave(origin, destination, direction) {
-    console.log('scrolling to ', destination.anchor);
+    // console.log('scrolling to ', destination.anchor);
     setScrollingTo(destination.anchor);
   }
   
   function afterLoad(origin, destination, direction)  {
-    console.log('active ', destination.anchor);
+    // console.log('active ', destination.anchor);
     setActive(destination.anchor);
   }
 
   return (
-    <div className={styles.container}>
+    <div>
 
       <Head>
         <title>Albert Bonmassip</title>
@@ -39,11 +37,12 @@ export default function App({projectsData}) {
 
       <ReactFullpage
         licenseKey='7B41902B-58344F4B-8F05FF7C-D6511DD6'
-        scrollingSpeed = {500}
+        scrollingSpeed={500}
         anchors={["home", "projects", "about"]}
         onLeave={onLeave}
         afterLoad={afterLoad}
         slidesNavigation={true}
+        // responsiveHeight={900}
         render={( {state, fullpageApi}) => {
           return (
             <ReactFullpage.Wrapper>

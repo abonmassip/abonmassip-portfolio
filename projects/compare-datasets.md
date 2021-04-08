@@ -1,6 +1,6 @@
 ---
 date: '2021-03-05'
-title: 'Compare Datasets - WIP'
+title: 'COMPARE DATASETS - WIP'
 links: {
   Github: 'https://github.com/abonmassip/compare-datasets'
 }

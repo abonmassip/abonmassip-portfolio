@@ -5,16 +5,18 @@ export function About() {
     <div className="section" data-anchor="about">
       <div className={styles.about}>
         <div className={styles.card}>
-          <div className={styles.card_avatar}>
-            <img src="/img/avatar_a.png" alt="Albert" />
+          <div className={styles.card_avatar_box}>
+            <div className={styles.card_avatar}>
+              <img src="/img/avatar_a.png" alt="Albert" />
+            </div>
           </div>
-          <div className={styles.card_info}>
+          <div className={styles.card_details}>
             <div>
-              <p>Albert Bonmassip Bove</p>
+              <p>Albert Bonmassip</p>
               <p>Palms, Los Angeles</p>
               <p>abonmassip@gmail.com</p>
             </div>
-            <div className={styles.card_info_logos}>
+            <div className={styles.card_details_logos}>
               <a href="https://github.com/abonmassip" target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 439">
                   <path d="M225-.400072C100.8-.400072 0 100.3 0 224.6 0 324 64.5 408.3 153.9 438.1c11.2 2.1 15.4-4.9 15.4-10.8 0-5.4-.2-23.1-.3-41.9-62.6 13.6-75.8-26.5-75.8-26.5-10.2-26-25-32.9-25-32.9-20.4-14 1.5-13.7 1.5-13.7 22.6 1.6 34.5 23.2 34.5 23.2 20.1 34.4 52.6 24.4 65.5 18.7 2-14.5 7.8-24.5 14.3-30.1-50-5.7-102.5-25-102.5-111.2 0-24.6 8.8-44.6 23.2-60.4-2.3-5.7-10-28.5 2.2-59.5001 0 0 18.9-6 61.9 23.1001 17.9-5 37.2-7.5 56.3-7.6 19.1.1 38.4 2.6 56.4 7.6 42.9-29.1001 61.8-23.1001 61.8-23.1001C355.5 124 347.9 146.9 345.5 152.5c14.4 15.7 23.1 35.8 23.1 60.4 0 86.4-52.6 105.4-102.7 111 8.1 7 15.3 20.7 15.3 41.7 0 30.1-.3 54.3-.3 61.7 0 6 4 13 15.5 10.8C385.6 408.2 450 323.9 450 224.5 450 100.3 349.3-.500072 225-.400072z"/>
@@ -43,19 +45,20 @@ export function About() {
         </div>
         
         <div className={styles.description}>
-          <h2 className="main-color">hello!</h2>
           <p>
-            I'm Albert, a front-end developer based in Los Angeles<span className="emoji">🌴</span>. I recently changed careers looking for new opportunities and challenges. My focus area is front-end development with Javascript and React.
-            Previously I worked as a 3D generalist, you can check out my 3D stuff <a className="shadow-color" href="https://abonmassip.artstation.com/"  target="_blank">here</a>.
-          </p>
-          <h2 className="main-color">skills</h2>
-          <p>
-            Experienced in <b>HTML5</b>, <b>CSS</b> and <b>Javascript</b>. The frameworks and libraries I mostly use are <b>React</b>, <b>Redux</b>, <b>Next.js</b>, <b>Sass</b> and <b>Styled Components</b>. Familiar with <b>Git</b>, version control and responsive web development.
+            <span className={styles.big}>HELLO!</span>
+            &nbsp;I'm Albert, a front-end developer based in Los Angeles<span className="emoji">🌴</span>. I recently changed careers looking for new opportunities and challenges. My focus area is front-end development with Javascript and React.
+            Previously I worked as a 3D generalist, you can check out my 3D stuff <a href="https://abonmassip.artstation.com/"  target="_blank">here</a>.
           </p>
           <p>
-            Check out my <a className="shadow-color" href="https://www.notion.so/abonmassip/Albert-Bonmassip-4d7471627e794160999bc4506b01d6a3" target="_blank">CV</a> or download the <a className="shadow-color" href="/AlbertBonmassip_CV.pdf">PDF</a>.
+            <span className={styles.big}>SKILLED</span>
+            &nbsp;in <b>HTML5</b>, <b>CSS</b> and <b>Javascript</b>. The frameworks and libraries I mostly use are <b>React</b>, <b>Redux</b>, <b>Next.js</b>, <b>Sass</b> and <b>Styled Components</b>. Experienced with <b>Git</b>, version control and responsive web development.
           </p>
-          <h2 className="main-color">I love <span className="emoji">🎼🎸 ⛺🏖️ 🎮👾</span></h2>
+          <p>
+            Check out my <a href="https://www.notion.so/abonmassip/Albert-Bonmassip-4d7471627e794160999bc4506b01d6a3" target="_blank">CV</a> or download the <a href="/AlbertBonmassip_CV.pdf" target="_blank">PDF</a>.
+          </p>
+          <span className={styles.big}>I LOVE </span>
+          <span className="emoji">🎸🎹🎼 🌄⛺🏖️ 🎮👾</span>
         </div>
 
         <div className={styles.footer}>

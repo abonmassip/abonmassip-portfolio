@@ -1,9 +1,9 @@
 ---
 date: '2020-02-11'
-title: 'Image Recognition App'
+title: 'IMAGE RECOGNITION APP'
 links: {
   Github: 'https://github.com/abonmassip/smartbrain',
-  ['Live demo']: 'https://dashboard.heroku.com/apps/abonmassip-smartbrain'
+  ['Live demo']: 'https://abonmassip-smartbrain.herokuapp.com/'
 }
 ---
 

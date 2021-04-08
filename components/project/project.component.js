@@ -20,7 +20,7 @@ export function Project({image, title, text, links}) {
       </Tilt>
 
       <div className={styles.info}>
-        <h1 className="main-color">{title}</h1>
+        <h1>{title}</h1>
         <div className={styles.info_text} dangerouslySetInnerHTML={{ __html: text }}/>
         <div className={styles.info_links}>
           {

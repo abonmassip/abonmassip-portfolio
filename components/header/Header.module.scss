@@ -1,5 +1,5 @@
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -11,8 +11,10 @@
 
   .link {
     position: absolute;
-    top: calc(50vh - 200px);
-    left: calc(50% - 220px);
+    top: calc(50vh - (var(--logo-height) / 2));
+    left: calc(50vw - (var(--logo-width) / 2));
+    width: var(--logo-width);
+    height: var(--logo-height);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,16 +22,6 @@
     cursor: pointer;
     text-decoration: none;
     transition: 0.5s;
-
-    &.small {
-      top: 50px;
-      left: 50px;
-
-      .link_logo svg {
-        width: 110px;
-        height: 100px;
-      }
-    }
 
     &:focus {
       outline: none;
@@ -39,13 +31,22 @@
       transition: 0.08s;
 
       &:hover {
-        transform: rotate(2deg) scale(1.1);
+        transform: rotate(1deg) scale(1.05);
       }
 
       svg {
+        width: var(--logo-width);
+        height: var(--logo-height);
         margin: 0px 16px;
         transition: 0.5s;
       }
+    }
+
+    &.small {
+      top: 50px;
+      left: 50px;
+      --logo-width: 110px;
+      --logo-height: 100px;
     }
 
     .link_text {
@@ -56,6 +57,8 @@
       opacity: 0;
       top: -25px;
       transition: 0.5s;
+      color: var(--main-color);
+      text-shadow: 2px 0px 0px var(--shadow-color);
 
       &.visible {
         opacity: 1;
@@ -87,6 +90,71 @@
 
       &:focus {
         outline: none;
+      }
+    }
+
+    .active {
+      color: var(--main-color);
+      text-shadow: 4px 0px 0px var(--shadow-color);
+    }
+  }
+}
+
+/* Mobile */
+@media only screen and (max-width: 767px) {
+  .header {
+    padding: 20px;
+
+    .link {
+      top: calc(47vh - (var(--logo-height) / 2));
+
+      &.small {
+        top: 20px;
+        left: 20px;
+        --logo-width: 77px;
+        --logo-height: 70px;
+      }
+
+      .link_logo:hover {
+        transform: none;
+      }
+
+      .link_text {
+        font-size: 16px;
+        text-shadow: 1px 0px 0px var(--shadow-color);
+      }
+    }
+
+    .menu {
+      font-size: 32px;
+
+      .active {
+        text-shadow: 2.5px 0px 0px var(--shadow-color);
+      }
+    }
+  }
+}
+
+/* Mobile OLD*/
+@media only screen and (max-width: 380px) {
+  .header {
+    padding: 10px;
+
+    .link {
+      &.small {
+        --logo-width: 55px;
+        --logo-height: 50px;
+      }
+      .link_text {
+        font-size: 12px;
+      }
+    }
+
+    .menu {
+      font-size: 24px;
+
+      .active {
+        text-shadow: 2px 0px 0px var(--shadow-color);
       }
     }
   }

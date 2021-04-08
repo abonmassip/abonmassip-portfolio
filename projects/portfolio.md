@@ -1,6 +1,6 @@
 ---
 date: '2021-02-15'
-title: 'Portfolio'
+title: 'PORTFOLIO'
 links: {
   Github: 'https://github.com/abonmassip/abonmassip-portfolio'
 }
