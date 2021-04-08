@@ -23,7 +23,7 @@ export function Project({ image, title, text, links }) {
         <div className={styles.info_links}>
           {links
             ? Object.entries(links).map(([site, link]) => (
-                <a href={link} key={`${title}_${site}`}>
+                <a href={link} key={`${title}_${site}`} target="_blank" rel="noreferrer">
                   {site}
                 </a>
               ))

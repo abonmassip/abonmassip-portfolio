@@ -45,13 +45,13 @@
     &.small {
       top: 50px;
       left: 50px;
-      --logo-width: 110px;
-      --logo-height: 100px;
+      --logo-width: 88px;
+      --logo-height: 80px;
     }
 
     .link_text {
       font-family: 'IBM Plex Sans', sans-serif;
-      font-size: 25px;
+      font-size: 20px;
       font-weight: 500;
       position: relative;
       opacity: 0;
@@ -75,7 +75,7 @@
     flex-direction: column;
     color: var(--text-color);
     padding: 0;
-    font-size: 50px;
+    font-size: 42px;
     font-weight: 400;
     pointer-events: all;
 
@@ -95,7 +95,7 @@
 
     .active {
       color: var(--main-color);
-      text-shadow: 4px 0px 0px var(--shadow-color);
+      text-shadow: 3px 0px 0px var(--shadow-color);
     }
   }
 }
@@ -111,8 +111,8 @@
       &.small {
         top: 20px;
         left: 20px;
-        --logo-width: 77px;
-        --logo-height: 70px;
+        --logo-width: 66px;
+        --logo-height: 60px;
       }
 
       .link_logo:hover {
@@ -120,13 +120,13 @@
       }
 
       .link_text {
-        font-size: 16px;
+        font-size: 14px;
         text-shadow: 1px 0px 0px var(--shadow-color);
       }
     }
 
     .menu {
-      font-size: 32px;
+      font-size: 28px;
 
       .active {
         text-shadow: 2.5px 0px 0px var(--shadow-color);
@@ -151,7 +151,7 @@
     }
 
     .menu {
-      font-size: 24px;
+      font-size: 22px;
 
       .active {
         text-shadow: 2px 0px 0px var(--shadow-color);
