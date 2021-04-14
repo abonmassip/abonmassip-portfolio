@@ -44,7 +44,7 @@ export default function App({ projectsData }) {
         render={({ state, fullpageApi }) => {
           return (
             <ReactFullpage.Wrapper>
-              <Home />
+              <Home scrollingTo={scrollingTo} />
               <Projects projectsData={projectsData} />
               <About />
             </ReactFullpage.Wrapper>

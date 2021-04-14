@@ -1,5 +1,3 @@
-import { setRandomColor } from '../../lib/colors'
-
 import styles from './Header.module.scss'
 
 import { Logo } from '../logo/logo.component'
@@ -7,11 +5,7 @@ import { Logo } from '../logo/logo.component'
 export function Header({ scrollingTo }) {
   return (
     <div className={styles.header}>
-      <a
-        className={`${styles.link} ${scrollingTo !== 'home' ? styles['small'] : ''}`}
-        href="#home"
-        onClick={() => scrollingTo === 'home' && setRandomColor()}
-      >
+      <a className={`${styles.link} ${scrollingTo !== 'home' ? styles['active'] : ''}`} href="#home">
         <div className={styles.link_logo}>
           <Logo />
         </div>

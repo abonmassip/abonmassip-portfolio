@@ -1,5 +1,6 @@
 // @import 'theme';
 @import 'fullpage-override';
+@import 'mixins';
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;400&family=IBM+Plex+Sans:wght@500&display=swap');
 
 :root {
@@ -7,9 +8,6 @@
   --shadow-color: #1c8ef1;
   --background-color: #111111;
   --text-color: #ffffff;
-
-  --logo-width: 440px;
-  --logo-height: 400px;
 }
 
 html,
@@ -40,52 +38,12 @@ a {
 
 .emoji {
   font-size: 1.2rem;
-}
 
-.comment {
-  color: #aaa;
-}
-
-/* 2K */
-@media only screen and (min-width: 2000px) {
-  :root {
-    --logo-width: 660px;
-    --logo-height: 600px;
-  }
-}
-
-/* Laptop */
-@media only screen and (max-width: 1407px) {
-  :root {
-    --logo-width: 330px;
-    --logo-height: 300px;
-  }
-}
-
-/* Tablet */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-  :root {
-    --logo-width: 330px;
-    --logo-height: 300px;
-  }
-}
-
-/* Mobile */
-@media only screen and (max-width: 767px) {
-  :root {
-    --logo-width: 220px;
-    --logo-height: 200px;
-  }
-
-  .emoji {
+  @include mobile {
     font-size: 1rem;
   }
 }
 
-/* Mobile OLD*/
-@media only screen and (max-width: 380px) {
-  :root {
-    --logo-width: 110px;
-    --logo-height: 100px;
-  }
+.comment {
+  color: #aaa;
 }

@@ -1,3 +1,5 @@
+@import '../../styles/mixins';
+
 .header {
   position: fixed;
   top: 0;
@@ -9,19 +11,24 @@
   align-items: center;
   pointer-events: none;
 
+  @include mobile { padding: 20px}
+  @include mobile-old { padding: 10px}
+
   .link {
-    position: absolute;
-    top: calc(50vh - (var(--logo-height) / 2));
-    left: calc(50vw - (var(--logo-width) / 2));
-    width: var(--logo-width);
-    height: var(--logo-height);
     display: flex;
     flex-direction: column;
     align-items: center;
     pointer-events: all;
     cursor: pointer;
     text-decoration: none;
-    transition: 0.5s;
+    transition: 0.2s;
+    transform: scale(0);
+    opacity: 0;
+
+    &.active {
+      transform: scale(1);
+      opacity: 1;
+    }
 
     &:focus {
       outline: none;
@@ -32,21 +39,24 @@
 
       &:hover {
         transform: rotate(1deg) scale(1.05);
+        @include mobile {transform: none;}
       }
 
       svg {
-        width: var(--logo-width);
-        height: var(--logo-height);
+        width: 88px;
+        height: 80px;
         margin: 0px 16px;
         transition: 0.5s;
-      }
-    }
 
-    &.small {
-      top: 50px;
-      left: 50px;
-      --logo-width: 88px;
-      --logo-height: 80px;
+        @include mobile {
+          width: 66px;
+          height: 60px;
+        }
+        @include mobile-old {
+          width: 44px;
+          height: 40px;
+        }
+      }
     }
 
     .link_text {
@@ -59,6 +69,14 @@
       transition: 0.5s;
       color: var(--main-color);
       text-shadow: 2px 0px 0px var(--shadow-color);
+
+      @include mobile {
+        font-size: 14px;
+        text-shadow: 1px 0px 0px var(--shadow-color);
+      }
+      @include mobile-old {
+        font-size: 12px;
+      }
 
       &.visible {
         opacity: 1;
@@ -79,6 +97,9 @@
     font-weight: 400;
     pointer-events: all;
 
+    @include mobile {font-size: 28px;}
+    @include mobile-old {font-size: 22px;}
+
     a {
       text-decoration: none;
       cursor: pointer;
@@ -96,66 +117,9 @@
     .active {
       color: var(--main-color);
       text-shadow: 3px 0px 0px var(--shadow-color);
-    }
-  }
-}
 
-/* Mobile */
-@media only screen and (max-width: 767px) {
-  .header {
-    padding: 20px;
-
-    .link {
-      top: calc(47vh - (var(--logo-height) / 2));
-
-      &.small {
-        top: 20px;
-        left: 20px;
-        --logo-width: 66px;
-        --logo-height: 60px;
-      }
-
-      .link_logo:hover {
-        transform: none;
-      }
-
-      .link_text {
-        font-size: 14px;
-        text-shadow: 1px 0px 0px var(--shadow-color);
-      }
-    }
-
-    .menu {
-      font-size: 28px;
-
-      .active {
-        text-shadow: 2.5px 0px 0px var(--shadow-color);
-      }
-    }
-  }
-}
-
-/* Mobile OLD*/
-@media only screen and (max-width: 380px) {
-  .header {
-    padding: 10px;
-
-    .link {
-      &.small {
-        --logo-width: 55px;
-        --logo-height: 50px;
-      }
-      .link_text {
-        font-size: 12px;
-      }
-    }
-
-    .menu {
-      font-size: 22px;
-
-      .active {
-        text-shadow: 2px 0px 0px var(--shadow-color);
-      }
+      @include mobile {text-shadow: 2.5px 0px 0px var(--shadow-color);}
+      @include mobile-old {text-shadow: 2px 0px 0px var(--shadow-color);}
     }
   }
 }

@@ -1,3 +1,5 @@
+@import '../../styles/mixins';
+
 .about {
   height: 100vh;
   max-height: -webkit-fill-available;
@@ -8,12 +10,25 @@
   align-items: center;
 
   margin: 0 20vw;
+  
+  @include mobile {margin: 0 30px;}
+  @include mobile-old {margin: 0 10px;}
 
   .card {
     display: flex;
     align-items: center;
     margin: 20px;
     width: 500px;
+
+    @include mobile {
+      width: 300px;
+      margin: 10px;
+      font-size: 0.8rem;
+    }
+    @include mobile-old {
+      width: 250px;
+      font-size: 0.6rem;
+    }
 
     .card_avatar_box {
       position: relative;
@@ -63,9 +78,18 @@
         }
         svg {
           fill: var(--main-color);
+          transition: 0.1s;
           width: 32px;
           height: 32px;
-          transition: 0.1s;
+
+          @include mobile {
+            width: 22px;
+            height: 22px;
+          }
+          @include mobile-old {
+            width: 16px;
+            height: 16px;
+          }
 
           &:hover {
             filter: drop-shadow(2px 0px 0px var(--shadow-color));
@@ -78,10 +102,21 @@
   .description {
     margin-top: 50px;
 
+    @include mobile {
+      font-size: 0.8rem;
+      margin-top: 10px;
+    }
+    @include mobile-old {
+      font-size: 0.6rem;
+      margin-top: 0px;
+    }
+
     .big {
       font-size: 1.25rem;
       color: var(--main-color);
       font-weight: 600;
+
+      @include mobile {font-size: 1rem;}
     }
 
     .description_block {
@@ -108,66 +143,7 @@
     position: fixed;
     bottom: 0;
     font-size: 0.8rem;
-  }
-}
 
-/* Mobile */
-@media only screen and (max-width: 767px) {
-  .about {
-    margin: 0 30px;
-
-    .card {
-      width: 300px;
-      margin: 10px;
-      font-size: 0.8rem;
-
-      .card_details {
-        .card_details_logos {
-          svg {
-            width: 22px;
-            height: 22px;
-          }
-        }
-      }
-    }
-
-    .description {
-      font-size: 0.8rem;
-      margin-top: 10px;
-
-      .big {
-        font-size: 1rem;
-      }
-    }
-
-    .footer {
-      bottom: 50px;
-    }
-  }
-}
-
-/* Mobile OLD*/
-@media only screen and (max-width: 380px) {
-  .about {
-    margin: 0 10px;
-
-    .card {
-      width: 250px;
-      font-size: 0.6rem;
-
-      .card_details {
-        .card_details_logos {
-          svg {
-            width: 16px;
-            height: 16px;
-          }
-        }
-      }
-    }
-
-    .description {
-      font-size: 0.6rem;
-      margin-top: 0px;
-    }
+    @include mobile {bottom: 50px;}
   }
 }
