@@ -21,6 +21,12 @@ body {
   background-color: var(--background-color);
   // scroll-behavior: smooth;
   color: var(--text-color);
+
+  @include mobile {
+    p {
+      line-height: 0.9rem;
+    }
+  }
 }
 
 * {
