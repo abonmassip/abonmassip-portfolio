@@ -83,7 +83,7 @@
 .scrollSign {
   position: relative;
   bottom: 5vh;
-  @include mobile {bottom: 5vh;}
+  @include mobile {bottom: 2vh;}
   display: flex;
   justify-content: center;
   transition: 0.1s;
