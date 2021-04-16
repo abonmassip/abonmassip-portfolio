@@ -5,17 +5,19 @@ import styles from './project.module.scss'
 export function Project({ image, title, text, links }) {
   return (
     <div className={styles.project}>
-      <Tilt
-        className={styles.tilt}
-        perspective={500}
-        tiltMaxAngleX={5}
-        tiltMaxAngleY={10}
-        glareEnable={true}
-        glareMaxOpacity={0.2}
-        scale={1.08}
-      >
-        <img src={image} alt={title} />
-      </Tilt>
+      <div className={styles.tilt_box}>
+        <Tilt
+          className={styles.tilt}
+          perspective={500}
+          tiltMaxAngleX={5}
+          tiltMaxAngleY={10}
+          glareEnable={true}
+          glareMaxOpacity={0.2}
+          scale={1.08}
+        >
+          <img src={image} alt={title} />
+        </Tilt>
+      </div>
 
       <div className={styles.info}>
         <h1>{title}</h1>
