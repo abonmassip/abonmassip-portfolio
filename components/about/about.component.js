@@ -47,11 +47,10 @@ export function About() {
         <div className={styles.description}>
           <p>
             <span className={styles.big}>HELLO!</span>
-            &nbsp;I&apos;m Albert, a front-end developer based in Los Angeles
-            <span className="emoji">🌴</span>. I recently changed careers looking for new opportunities and challenges.
-            My focus area is front-end development with Javascript and React. Previously I worked as a 3D generalist,
-            you can check out my 3D stuff{' '}
-            <a href="https://abonmassip.artstation.com/" target="_blank" rel="noreferrer">
+            &nbsp;I&apos;m Albert, a front-end developer based in Los<span className="emoji">🌴</span>Angeles. I
+            recently changed careers looking for new opportunities and challenges. My focus area is front-end
+            development with Javascript and React. Previously I worked as a 3D generalist, you can check out my 3D stuff{' '}
+            <a className={styles.link} href="https://abonmassip.artstation.com/" target="_blank" rel="noreferrer">
               here
             </a>
             .
@@ -63,20 +62,11 @@ export function About() {
             <b>Git</b>, version control and responsive web development.
           </p>
           <p>
-            Check out my{' '}
-            <a
-              href="https://www.notion.so/abonmassip/Albert-Bonmassip-4d7471627e794160999bc4506b01d6a3"
-              target="_blank"
-              rel="noreferrer"
-            >
-              CV
-            </a>{' '}
-            or download the{' '}
-            <a href="/AlbertBonmassip_CV.pdf" target="_blank">
-              PDF
+            <a href="/AlbertBonmassip_Resume.pdf" target="_blank">
+              <span className={styles.resume}>VIEW MY RESUME</span>
             </a>
-            .
           </p>
+          <br />
           <span className={styles.big}>I LOVE </span>
           <span className="emoji">🎸🎹🎼 🌄⛺🏖️ 🎮👾</span>
         </div>

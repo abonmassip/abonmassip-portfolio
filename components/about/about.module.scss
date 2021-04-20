@@ -123,19 +123,28 @@
       display: flex;
     }
 
-    h2 {
-      color: var(--main-color);
-      margin-right: 50px;
-    }
-
     b,
-    a {
+    .link {
       font-weight: 600;
       color: var(--shadow-color);
+      
+      &:hover {
+        color: var(--main-color);
+      }
     }
 
-    a:hover {
+
+    .resume {
+      font-size: 1.25rem;
+      font-weight: 600;
       color: var(--main-color);
+      text-decoration: underline;
+
+      &:hover {
+        color: var(--shadow-color);
+      }
+
+      @include mobile {font-size: 1rem;}
     }
   }
 
