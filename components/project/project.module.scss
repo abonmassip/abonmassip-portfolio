@@ -88,10 +88,10 @@
 
       a {
         font-weight: 600;
-        color: var(--shadow-color);
-
+        color: var(--main-color);
+        
         &:hover {
-          color: var(--main-color);
+          color: var(--shadow-color);
         }
       }
     }
