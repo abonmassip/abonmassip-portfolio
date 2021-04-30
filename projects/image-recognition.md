@@ -9,7 +9,7 @@ links: {
 
 App that gets an image and detects if it has a face on it.
 
-I used **React**, **Node** and **Express.js** for the backend, **PostgreSQL** for the database and **Clarifai API** for the image recognition features.
+I used **React**, **Express.js** for the backend, **PostgreSQL** for the database and **Clarifai API** for the image recognition features.
 
 I also used **React Hooks**, **Tachyons** and **bcrypt**.
 
