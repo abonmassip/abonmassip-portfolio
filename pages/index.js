@@ -9,7 +9,7 @@ import { About } from '../components/about/about.component'
 
 import { getProjectsData } from '../lib/projects'
 
-export default function App({ projectsData }) {
+export default function App({ projectsReact, projectsThreejs }) {
   const [scrollingTo, setScrollingTo] = useState('home')
   const [active, setActive] = useState('home')
 
@@ -36,7 +36,7 @@ export default function App({ projectsData }) {
       <ReactFullpage
         licenseKey="7B41902B-58344F4B-8F05FF7C-D6511DD6"
         scrollingSpeed={500}
-        anchors={['home', 'projects', 'about']}
+        anchors={['home', 'react', 'threejs', 'about']}
         onLeave={onLeave}
         afterLoad={afterLoad}
         slidesNavigation={true}
@@ -45,7 +45,8 @@ export default function App({ projectsData }) {
           return (
             <ReactFullpage.Wrapper>
               <Home scrollingTo={scrollingTo} />
-              <Projects projectsData={projectsData} />
+              <Projects projectsData={projectsReact} what="react" />
+              <Projects projectsData={projectsThreejs} what="threejs" />
               <About />
             </ReactFullpage.Wrapper>
           )
@@ -56,10 +57,12 @@ export default function App({ projectsData }) {
 }
 
 export async function getStaticProps() {
-  const projectsData = await getProjectsData()
+  const projectsReact = await getProjectsData('react')
+  const projectsThreejs = await getProjectsData('threejs')
   return {
     props: {
-      projectsData,
+      projectsReact,
+      projectsThreejs,
     },
   }
 }

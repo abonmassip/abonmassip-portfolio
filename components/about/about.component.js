@@ -46,10 +46,10 @@ export function About() {
 
         <div className={styles.description}>
           <p>
-            <span className={styles.big}>HELLO!</span> I&apos;m Albert, a front-end developer based in Los
-            <span className="emoji">🌴</span>Angeles. I recently changed careers looking for new opportunities and
-            challenges. My focus area is front-end development with JavaScript and React. Previously I worked as a 3D
-            generalist, you can check out my 3D stuff{' '}
+            <span className={styles.big}>HELLO!</span> I&apos;m Albert, a front-end developer based in Los Angeles
+            <span className="emoji">🌴</span>. I recently changed careers looking for new opportunities and challenges.
+            My focus area is front-end development with JavaScript and React. Previously I worked as a 3D generalist,
+            you can check out my 3D projects{' '}
             <a className={styles.link} href="https://abonmassip.artstation.com/" target="_blank" rel="noreferrer">
               here
             </a>
@@ -58,7 +58,8 @@ export function About() {
           <p>
             <span className={styles.big}>SKILLED</span> in <b>JavaScript</b>, <b>CSS</b>, <b>HTML5</b>, plus modern
             libraries and frameworks like <b>React</b>, <b>Redux</b>, <b>Next.js</b>, <b>Sass</b> and{' '}
-            <b>Styled Components</b>. Experienced with <b>Git</b>, version control and responsive web development.
+            <b>Styled Components</b>. Experienced with <b>Git</b>, version control and responsive web development. I am
+            also proficient with <b>Blender</b> and I am steadily learning <b>WebGL</b> and <b>Three.js</b>.
           </p>
           <p>
             <a href="/AlbertBonmassip_Resume.pdf" target="_blank">
