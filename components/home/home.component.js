@@ -23,7 +23,7 @@ export function Home({ scrollingTo }) {
         </span>
       </div>
       <div className={`${styles.scrollSign} ${scrollingTo === 'home' ? styles.visible : styles.hidden}`}>
-        <a href="#projects">
+        <a href="#react">
           <div className={styles.arrow}></div>
         </a>
       </div>
