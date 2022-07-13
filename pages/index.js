@@ -11,25 +11,25 @@ import { getProjectsData } from '../lib/projects'
 
 export default function App({ projectsReact, projectsThreejs }) {
   useEffect(() => {
-    let vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
+    let vh = window.innerHeight * 0.01
+    document.documentElement.style.setProperty('--vh', `${vh}px`)
     window.addEventListener('resize', () => {
-      let vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty('--vh', `${vh}px`);
+      let vh = window.innerHeight * 0.01
+      document.documentElement.style.setProperty('--vh', `${vh}px`)
     })
   }, [])
   const [scrollingTo, setScrollingTo] = useState('home')
-  const [active, setActive] = useState('home')
+  // const [active, setActive] = useState('home')
 
-  function onLeave(origin, destination, direction) {
+  function onLeave(origin, destination) {
     // console.log('scrolling to ', destination.anchor);
     setScrollingTo(destination.anchor)
   }
 
-  function afterLoad(origin, destination, direction) {
-    // console.log('active ', destination.anchor);
-    setActive(destination.anchor)
-  }
+  // function afterLoad(origin, destination) {
+  //   // console.log('active ', destination.anchor);
+  //   // setActive(destination.anchor)
+  // }
 
   return (
     <div>
@@ -46,11 +46,11 @@ export default function App({ projectsReact, projectsThreejs }) {
         scrollingSpeed={500}
         anchors={['home', 'react', 'threejs', 'about']}
         onLeave={onLeave}
-        afterLoad={afterLoad}
+        // afterLoad={afterLoad}
         slidesNavigation={true}
         credits={{ enabled: false }}
         // responsiveHeight={900}
-        render={({ state, fullpageApi }) => {
+        render={() => {
           return (
             <ReactFullpage.Wrapper>
               <Home scrollingTo={scrollingTo} />
