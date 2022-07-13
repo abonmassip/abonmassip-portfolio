@@ -72,7 +72,7 @@ export function About() {
         </div>
 
         <div className={styles.footer}>
-          <p>Albert Bonmassip © 2021</p>
+          <p>Albert Bonmassip © 2022</p>
         </div>
       </div>
     </div>

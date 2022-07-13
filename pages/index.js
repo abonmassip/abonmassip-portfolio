@@ -1,5 +1,5 @@
 import ReactFullpage from '@fullpage/react-fullpage'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Head from 'next/head'
 
 import { Header } from '../components/header/Header.component'
@@ -10,6 +10,14 @@ import { About } from '../components/about/about.component'
 import { getProjectsData } from '../lib/projects'
 
 export default function App({ projectsReact, projectsThreejs }) {
+  useEffect(() => {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+    window.addEventListener('resize', () => {
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    })
+  }, [])
   const [scrollingTo, setScrollingTo] = useState('home')
   const [active, setActive] = useState('home')
 
@@ -40,6 +48,7 @@ export default function App({ projectsReact, projectsThreejs }) {
         onLeave={onLeave}
         afterLoad={afterLoad}
         slidesNavigation={true}
+        credits={{ enabled: false }}
         // responsiveHeight={900}
         render={({ state, fullpageApi }) => {
           return (

@@ -2,6 +2,7 @@
 
 .about {
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   max-height: -webkit-fill-available;
 
   display: flex;
@@ -10,7 +11,7 @@
   align-items: center;
 
   margin: 0 20vw;
-  
+
   @include mobile {margin: 0 30px;}
   @include mobile-old {margin: 0 10px;}
 
@@ -127,7 +128,7 @@
       font-weight: 600;
       color: var(--shadow-color);
     }
-    
+
     .link {
       font-weight: 600;
       color: var(--main-color);
