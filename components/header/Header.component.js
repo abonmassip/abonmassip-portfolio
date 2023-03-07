@@ -15,17 +15,17 @@ export function Header({ scrollingTo }) {
       <ul className={styles.menu}>
         <li>
           <a className={scrollingTo === 'react' ? styles.active : ''} href="#react">
-            react.js
+            React
           </a>
         </li>
         <li>
           <a className={scrollingTo === 'threejs' ? styles.active : ''} href="#threejs">
-            three.js
+            WebGL
           </a>
         </li>
-        <li>
+        <li className={styles.aboutme}>
           <a className={scrollingTo === 'about' ? styles.active : ''} href="#about">
-            about me
+            bio
           </a>
         </li>
       </ul>

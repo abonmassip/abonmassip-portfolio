@@ -42,7 +42,7 @@ export default function App({ projectsReact, projectsThreejs }) {
       <Header scrollingTo={scrollingTo} />
 
       <ReactFullpage
-        licenseKey="7B41902B-58344F4B-8F05FF7C-D6511DD6"
+        licenseKey={"7B41902B-58344F4B-8F05FF7C-D6511DD6"}
         scrollingSpeed={500}
         anchors={['home', 'react', 'threejs', 'about']}
         onLeave={onLeave}

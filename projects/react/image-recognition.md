@@ -1,16 +1,15 @@
 ---
-date: '2020-02-11'
-title: 'IMAGE RECOGNITION APP'
-links: {
-  Github: 'https://github.com/abonmassip/smartbrain',
-  ['Live demo']: 'https://abonmassip-smartbrain.herokuapp.com/'
-}
+date: "2023-03-01"
+title: "IMAGE RECOGNITION APP"
+links:
+  {
+    Github: "https://github.com/abonmassip/thats-a-face",
+    ["Live demo"]: "https://taupe-praline-ae8da9.netlify.app/",
+  }
 ---
 
-App that gets an image and detects if it has a face on it.
+**React** app that gets an image and detects if it has any faces on it.
 
-I used **React**, **Express.js** for the backend, **PostgreSQL** for the database and **Clarifai API** for the image recognition features.
+**Tachyons** for CSS styling, backend server made in **Express.js**, **PostgreSQL** database for the login system, **bcrypt** to store hashed passwords safely. **Clarifai API** used for the image recognition features.
 
-I also used **React Hooks**, **Tachyons** and **bcrypt**.
-
-Hosted on a free **Heroku** account, it takes a minute to load the site.
+Server hosted on **cyclic.sh**, database on **supabase.com** and front-end on **netlify.com**.

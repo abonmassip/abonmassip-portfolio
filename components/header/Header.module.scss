@@ -101,6 +101,10 @@
     @include mobile {font-size: 28px;}
     @include mobile-old {font-size: 22px;}
 
+    .aboutme a{
+      font-size: 0.8em;
+    }
+
     a {
       text-decoration: none;
       cursor: pointer;
