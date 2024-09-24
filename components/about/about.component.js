@@ -1,4 +1,4 @@
-import styles from './about.module.scss'
+import styles from "./about.module.scss";
 
 export function About() {
   return (
@@ -12,18 +12,26 @@ export function About() {
           </div>
           <div className={styles.card_details}>
             <div>
-              <p>Albert Bonmassip</p>
-              <p>Palms, Los Angeles</p>
+              <p>Albert Bonmassip Bové</p>
+              <p>Sabadell, Barcelona</p>
               <p>abonmassip@gmail.com</p>
             </div>
             <div className={styles.card_details_logos}>
-              <a href="https://github.com/abonmassip" target="_blank" rel="noreferrer">
+              <a
+                href="https://github.com/abonmassip"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 439">
                   <path d="M225-.400072C100.8-.400072 0 100.3 0 224.6 0 324 64.5 408.3 153.9 438.1c11.2 2.1 15.4-4.9 15.4-10.8 0-5.4-.2-23.1-.3-41.9-62.6 13.6-75.8-26.5-75.8-26.5-10.2-26-25-32.9-25-32.9-20.4-14 1.5-13.7 1.5-13.7 22.6 1.6 34.5 23.2 34.5 23.2 20.1 34.4 52.6 24.4 65.5 18.7 2-14.5 7.8-24.5 14.3-30.1-50-5.7-102.5-25-102.5-111.2 0-24.6 8.8-44.6 23.2-60.4-2.3-5.7-10-28.5 2.2-59.5001 0 0 18.9-6 61.9 23.1001 17.9-5 37.2-7.5 56.3-7.6 19.1.1 38.4 2.6 56.4 7.6 42.9-29.1001 61.8-23.1001 61.8-23.1001C355.5 124 347.9 146.9 345.5 152.5c14.4 15.7 23.1 35.8 23.1 60.4 0 86.4-52.6 105.4-102.7 111 8.1 7 15.3 20.7 15.3 41.7 0 30.1-.3 54.3-.3 61.7 0 6 4 13 15.5 10.8C385.6 408.2 450 323.9 450 224.5 450 100.3 349.3-.500072 225-.400072z" />
                 </svg>
               </a>
 
-              <a href="https://www.linkedin.com/in/abonmassip/" target="_blank" rel="noreferrer">
+              <a
+                href="https://www.linkedin.com/in/abonmassip/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
                   <path d="M27.3 27.3h-4.7v-7.4c0-1.8 0-4-2.5-4s-2.8 1.9-2.8 3.9v7.6h-4.7V12H17v2.1h.1c.6-1.2 2.2-2.5 4.5-2.5 4.8 0 5.7 3.2 5.7 7.3v8.4zM7.1 9.9c-1.5 0-2.8-1.2-2.8-2.8 0-1.5 1.2-2.7 2.8-2.7s2.8 1.2 2.8 2.7c0 1.6-1.3 2.8-2.8 2.8zm2.4 17.4H4.7V12h4.7v15.3zM29.6 0H2.4C1.1 0 0 1 0 2.3v27.4C0 31 1.1 32 2.4 32h27.3c1.3 0 2.4-1 2.4-2.3V2.3C32 1 30.9 0 29.6 0z" />
                 </svg>
@@ -35,8 +43,16 @@ export function About() {
                 </svg>
               </a>
 
-              <a href="https://abonmassip.artstation.com/" target="_blank" rel="noreferrer">
-                <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 398">
+              <a
+                href="https://abonmassip.artstation.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <svg
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 450 398"
+                >
                   <path d="M0 306.5l38.1 65.8c7.7 15.4 23.4 25.1 40.6 25.1h252.7L279 306.5H0zm442.6-24.3L295.4 24.8001C287.5 9.9001 272 .600098 255.2.600098h-78.3L404.8 397l36-62.4c1.7-2.9 18.6-26.3 1.8-52.4zm-200.8-40.3L139.5 64.8001 37.2 241.9h204.6z" />
                 </svg>
               </a>
@@ -46,35 +62,48 @@ export function About() {
 
         <div className={styles.description}>
           <p>
-            <span className={styles.big}>HELLO!</span> I&apos;m Albert, a front-end developer based in Los Angeles
-            <span className="emoji">🌴</span>. I recently changed careers looking for new opportunities and challenges.
-            My focus area is front-end development with JavaScript and React. Previously I worked as a 3D generalist,
-            you can check out my 3D projects{' '}
-            <a className={styles.link} href="https://abonmassip.artstation.com/" target="_blank" rel="noreferrer">
-              here
+            <span className={styles.big}>Hello!</span> I&apos;m Albert, I have
+            been living abroad for 10 years, first in Zurich{" "}
+            <span className="emoji">🌧️</span>
+            <span className="emoji">🏔️</span>
+            <span className="emoji">⛷️</span> and then Los Angeles{" "}
+            <span className="emoji">🌞</span>
+            <span className="emoji">🏖️</span>
+            <span className="emoji">🏕️</span>. I recently came back to Barcelona
+            looking for new opportunities and challenges.
+          </p>
+          <p>
+            I am a <span className={styles.big}>front-end developer</span>,
+            experienced in <b>JavaScript</b>, <b>HTML</b> and <b>CSS</b>. I
+            mainly use <b>React</b> and <b>Next.js</b> to build sites, and{" "}
+            <b>Three.js</b> to create 3D experiences. I also have skills in
+            back-end, I have used Node and Express, PostgreSQL and MongoDB.
+          </p>
+          <p>
+            Because of my previous career in computer graphics as a{" "}
+            <a
+              className={styles.link}
+              href="https://abonmassip.artstation.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              3D generalist
             </a>
-            .
+            , I am also proficient in <b>Adobe Photoshop</b>, <b>Blender</b> and
+            all aspects of 3D graphics.
           </p>
-          <p>
-            <span className={styles.big}>SKILLED</span> in <b>JavaScript</b>, <b>CSS</b>, <b>HTML5</b>, plus modern
-            libraries and frameworks like <b>React</b>, <b>Redux</b>, <b>Next.js</b>, <b>Sass</b> and{' '}
-            <b>Styled Components</b>. Experienced with <b>Git</b>, version control and responsive web development. I am
-            also proficient with <b>Blender</b> and I am steadily learning <b>WebGL</b> and <b>Three.js</b>.
-          </p>
-          <p>
+
+          <p style={{ textAlign: "center" }}>
             <a href="/AlbertBonmassip_Resume.pdf" target="_blank">
-              <span className={styles.resume}>VIEW MY RESUME</span>
+              <span className={styles.resume}>my resume</span>
             </a>
           </p>
-          <br />
-          <span className={styles.big}>I LOVE </span>
-          <span className="emoji">🎸🎹🎼 🌄⛺🏖️ 🎮👾</span>
         </div>
 
         <div className={styles.footer}>
-          <p>Albert Bonmassip © 2023</p>
+          <p>abonmassip © 2024</p>
         </div>
       </div>
     </div>
-  )
+  );
 }

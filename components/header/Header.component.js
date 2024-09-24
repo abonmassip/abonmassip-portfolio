@@ -1,34 +1,54 @@
-import styles from './Header.module.scss'
+import styles from "./Header.module.scss";
 
-import { Logo } from '../logo/logo.component'
+import { Logo } from "../logo/logo.component";
 
 export function Header({ scrollingTo }) {
   return (
     <div className={styles.header}>
-      <a className={`${styles.link} ${scrollingTo !== 'home' ? styles['active'] : ''}`} href="#home">
+      <a
+        className={`${styles.link} ${
+          scrollingTo !== "home" ? styles["active"] : ""
+        }`}
+        href="#home"
+      >
         <div className={styles.link_logo}>
           <Logo />
         </div>
-        <div className={`${styles.link_text} ${scrollingTo !== 'home' ? styles.visible : ''}`}>abonmassip</div>
+        <div
+          className={`${styles.link_text} ${
+            scrollingTo !== "home" ? styles.visible : ""
+          }`}
+        >
+          abonmassip
+        </div>
       </a>
 
       <ul className={styles.menu}>
         <li>
-          <a className={scrollingTo === 'react' ? styles.active : ''} href="#react">
+          <a
+            className={scrollingTo === "react" ? styles.active : ""}
+            href="#react"
+          >
             React
           </a>
         </li>
         <li>
-          <a className={scrollingTo === 'threejs' ? styles.active : ''} href="#threejs">
+          <a
+            className={scrollingTo === "threejs" ? styles.active : ""}
+            href="#threejs"
+          >
             WebGL
           </a>
         </li>
         <li className={styles.aboutme}>
-          <a className={scrollingTo === 'about' ? styles.active : ''} href="#about">
-            bio
+          <a
+            className={scrollingTo === "about" ? styles.active : ""}
+            href="#about"
+          >
+            Bio
           </a>
         </li>
       </ul>
     </div>
-  )
+  );
 }
