@@ -94,8 +94,12 @@ export function About() {
           </p>
 
           <p style={{ textAlign: "center" }}>
+            <span className={styles.big}>download my resume: </span>
             <a href="/AlbertBonmassip_Resume.pdf" target="_blank">
-              <span className={styles.resume}>my resume</span>
+              <span className={styles.resume}>PDF</span>
+            </a>{" "}
+            <a href="/AlbertBonmassip_Resume.md" target="_blank">
+              <span className={styles.resume}>Markdown</span>
             </a>
           </p>
         </div>
