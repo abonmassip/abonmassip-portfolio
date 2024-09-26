@@ -1,7 +1,7 @@
 // @import 'theme';
-@import 'fullpage-override';
-@import 'mixins';
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;400&family=IBM+Plex+Sans:wght@500&display=swap');
+@import "fullpage-override";
+@import "mixins";
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;400&family=IBM+Plex+Sans:wght@500&display=swap");
 
 :root {
   --main-color: #ffdd7c;
@@ -14,7 +14,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-style: normal;
   font-weight: 200;
   font-size: 18px;
@@ -23,8 +23,9 @@ body {
   color: var(--text-color);
 
   @include mobile {
+    font-size: 14px;
     p {
-      line-height: 0.9rem;
+      // line-height: 0.9rem;
     }
   }
 }

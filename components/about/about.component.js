@@ -62,25 +62,23 @@ export function About() {
 
         <div className={styles.description}>
           <p>
-            <span className={styles.big}>Hello!</span> I&apos;m Albert, I have
-            been living abroad for 10 years, first in Zurich{" "}
-            <span className="emoji">🌧️</span>
+            <span className={styles.big}>Hi!</span> I&apos;m Albert. After
+            spending 9 years abroad, in Zurich <span className="emoji">🌧️</span>
             <span className="emoji">🏔️</span>
             <span className="emoji">⛷️</span> and then Los Angeles{" "}
             <span className="emoji">🌞</span>
             <span className="emoji">🏖️</span>
-            <span className="emoji">🏕️</span>. I recently came back to Barcelona
-            looking for new opportunities and challenges.
+            <span className="emoji">🏕️</span>, I&apos;ve recently returned to
+            Barcelona, eager to explore new opportunities and challenges.
           </p>
           <p>
-            I am a <span className={styles.big}>front-end developer</span>,
-            experienced in <b>JavaScript</b>, <b>HTML</b> and <b>CSS</b>. I
-            mainly use <b>React</b> and <b>Next.js</b> to build sites, and{" "}
-            <b>Three.js</b> to create 3D experiences. I also have skills in
-            back-end, I have used Node and Express, PostgreSQL and MongoDB.
-          </p>
-          <p>
-            Because of my previous career in computer graphics as a{" "}
+            As a <span className={styles.big}>front-end developer</span>, I have
+            solid experience in <b>JavaScript</b>, <b>HTML</b> and <b>CSS</b>,
+            with a focus on building websites using <b>React</b> and{" "}
+            <b>Next.js</b>, and creating 3D web experiences with <b>Three.js</b>
+            . I also bring back-end skills, working with Node.js, Express,
+            PostgreSQL and MongoDB. With a previous career in computer graphics
+            as a{" "}
             <a
               className={styles.link}
               href="https://abonmassip.artstation.com/"
@@ -89,18 +87,14 @@ export function About() {
             >
               3D generalist
             </a>
-            , I am also proficient in <b>Adobe Photoshop</b>, <b>Blender</b> and
-            all aspects of 3D graphics.
+            , I&apos;m proficient in <b>Adobe Photoshop</b>, <b>Blender</b> and
+            the entire 3D graphics pipeline.
           </p>
 
           <p style={{ textAlign: "center" }}>
-            <span className={styles.big}>download my resume: </span>
             <a href="/AlbertBonmassip_Resume.pdf" target="_blank">
-              <span className={styles.resume}>PDF</span>
+              <span className={styles.resume}>my resume</span>
             </a>{" "}
-            <a href="/AlbertBonmassip_Resume.md" target="_blank">
-              <span className={styles.resume}>Markdown</span>
-            </a>
           </p>
         </div>
 
