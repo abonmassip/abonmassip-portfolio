@@ -29,7 +29,7 @@ export function Header({ scrollingTo }) {
             className={scrollingTo === "react" ? styles.active : ""}
             href="#react"
           >
-            React
+            React.js
           </a>
         </li>
         <li>
@@ -37,7 +37,7 @@ export function Header({ scrollingTo }) {
             className={scrollingTo === "threejs" ? styles.active : ""}
             href="#threejs"
           >
-            WebGL
+            Three.js
           </a>
         </li>
         <li className={styles.aboutme}>
@@ -45,7 +45,7 @@ export function Header({ scrollingTo }) {
             className={scrollingTo === "about" ? styles.active : ""}
             href="#about"
           >
-            Bio
+            About me
           </a>
         </li>
       </ul>
