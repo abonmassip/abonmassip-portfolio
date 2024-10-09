@@ -76,9 +76,9 @@ export function About() {
             solid experience in <b>JavaScript</b>, <b>HTML</b> and <b>CSS</b>,
             with a focus on building websites using <b>React</b> and{" "}
             <b>Next.js</b>, and creating 3D web experiences with <b>Three.js</b>
-            . I also bring back-end skills, working with Node.js, Express,
-            PostgreSQL and MongoDB. With a previous career in computer graphics
-            as a{" "}
+            . Additionally, I have developed back-end skills, working with{" "}
+            <b>Node.js</b>, <b>Express</b>, <b>PostgreSQL</b> and <b>MongoDB</b>
+            . With a previous career in computer graphics as a{" "}
             <a
               className={styles.link}
               href="https://abonmassip.artstation.com/"
