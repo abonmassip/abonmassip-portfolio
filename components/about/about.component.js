@@ -72,29 +72,34 @@ export function About() {
             Barcelona, eager to explore new opportunities and challenges.
           </p>
           <p>
-            As a <span className={styles.big}>front-end developer</span>, I have
-            solid experience in <b>JavaScript</b>, <b>HTML</b> and <b>CSS</b>,
-            with a focus on building websites using <b>React</b> and{" "}
-            <b>Next.js</b>, and creating 3D web experiences with <b>Three.js</b>
-            . Additionally, I have developed back-end skills, working with{" "}
-            <b>Node.js</b>, <b>Express</b>, <b>PostgreSQL</b> and <b>MongoDB</b>
-            . With a previous career in computer graphics as a{" "}
+            As a <span className={styles.big}>front-end developer</span>, I
+            build dynamic websites with <b>React</b> and <b>Next.js</b>, and
+            create 3D web experiences using <b>Three.js</b>. I also have backend
+            experience, using technologies like <b>Express</b> and{" "}
+            <b>PostgreSQL</b>, and mybackground in{" "}
             <a
               className={styles.link}
               href="https://abonmassip.artstation.com/"
               target="_blank"
               rel="noreferrer"
             >
-              3D generalist
-            </a>
-            , I&apos;m proficient in <b>Adobe Photoshop</b>, <b>Blender</b> and
-            the entire 3D graphics pipeline.
+              3D graphics
+            </a>{" "}
+            has given me advanced skills in <b>Adobe Photoshop</b>,{" "}
+            <b>Blender</b> and the entire 3D graphics pipeline.
           </p>
 
           <p style={{ textAlign: "center" }}>
-            <a href="/AlbertBonmassip_Resume.pdf" target="_blank">
-              <span className={styles.resume}>my resume</span>
+            download my resume{" "}
+            <a href="/AlbertBonmassip_CV-EN.pdf" target="_blank">
+              <span className={styles.resume}>english</span>
             </a>{" "}
+            <a href="/AlbertBonmassip_CV-CA.pdf" target="_blank">
+              <span className={styles.resume}>català</span>
+            </a>{" "}
+            <a href="/AlbertBonmassip_CV-ES.pdf" target="_blank">
+              <span className={styles.resume}>español</span>
+            </a>
           </p>
         </div>
 
